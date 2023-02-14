@@ -83,8 +83,8 @@ header.sticky ul li a:hover
     background-size: cover;
 }
 article{
-    background-color: #fff;
-    height: 111vh;
+    background-color: #888888;
+    height: 100vh;
     width: 100%;
 }
 #home{
@@ -94,7 +94,7 @@ article{
 .titulo{
     padding: 70px;
 }
-p{
+.letras{
     text-align: center;
     color: #000;
     font-size: 4em;
@@ -106,4 +106,6 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    background-size: cover;
 }
