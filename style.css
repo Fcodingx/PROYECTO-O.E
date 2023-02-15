@@ -205,7 +205,12 @@ span a{
   font-weight: bold;
 
 }
-
+#About{
+  padding: 10px;
+}
+.abo{
+  width: 50%;
+}
 @media (min-width:900px) {
     header .logo{
         position: relative;
