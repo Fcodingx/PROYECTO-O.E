@@ -9,6 +9,8 @@
     <title>ADITUS</title>
 </head>
 <body>
+    <span>
+    </span>
         <header>
             <a href="#" class="logo" >ADITUS</a>
             <ul>
@@ -19,29 +21,64 @@
         </header>
     <section>
         <article id="banner">
-                <video  loop src="images/ADITUS ‐ Hecho con Clipchamp.mp4" width="100%" autoplay>
+                <video  loop width="100%" autoplay muted>
+                    <source class="compu" src="images/ADITUS ‐ Hecho con Clipchamp.mp4">
                 </video>
         </article>
+        <article id="bannercel">
+            <video  loop width="100%" autoplay muted>
+                <source class="cel" src="images/ADITUS ‐ Hecho con Clipchamp (1).mp4">
+            </video>
+    </article>
         <article id="Home">
 
+            <div class="titulo">
+                <h1 class="letras">Home</h1>
+            </div>
+            <p style="text-align: center; font-size: 2rem; padding: 30px;">
+                Presentamos en nuevo ADITUS ORION
+            </p>
             <div class="contenedor">
-                <div class="titulo">
-                    <p class="letras">Home</p>
+                <div class="textimage">
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, nostrum. Possimus inventore iure commodi est nulla quia veniam? Sunt accusamus obcaecati eum numquam amet magnam veniam, quisquam dolore voluptate illum velit ipsum voluptates odio est sed! Esse, iusto ipsam. Cumque aspernatur quisquam fugit voluptatem qui eveniet eligendi. Ipsum, maiores at rerum perspiciatis ullam asperiores illo suscipit voluptate unde soluta consequuntur natus sapiente dolorem exercitationem iusto est iure hic fuga beatae veniam fugiat? Culpa, repudiandae impedit ipsum cum quae quidem nulla.</p>
+                    </div>
+                    <div class="image">
+                        <img class="ab" src="images/carbck.jpg" alt="">
+                    </div>
                 </div>
-                <div class="modelcont">
-                    <img class="modelo" src="images/CARRO.png" width="50%" alt="">
+                <div class="textimage">
+                    <div class="image">
+                        <img class="ab" src="images/carbck.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae asperiores id veniam laboriosam, sapiente dignissimos hic aliquam aut nostrum laborum natus facere reprehenderit quas quis unde voluptates dolores minima incidunt sequi exercitationem? Similique nihil eveniet nostrum deserunt placeat praesentium sapiente eius natus, voluptatem tenetur doloremque nemo aut eos quam cupiditate delectus. Harum expedita officiis nulla, consequuntur tempore illo! Quaerat, expedita deserunt illo modi minima nam deleniti quasi iste eveniet facere, earum vero quo soluta? Officiis quidem commodi aspernatur itaque culpa.</p>
+                    </div>
                 </div>
+
             </div>
         </article>
         <article id="About">
+            <div class="titulo">
+                <h1 class="letras">About</h1>
+            </div>
+            <article class="contenedor"></article>
         </article>
         <article id="Contact">
+            <div class="titulo">
+                <h1 class="letras">Contact</h1>
+            </div>
+            <article class="contenedor"></article>
         </article>
     </section>
     <script type="text/javascript">
         window.addEventListener("scroll", function(){
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 100);
+        })
+        window.addEventListener("scroll", function(){
+            var span = document.querySelector("span");
+            span.classList.toogle("appear", window.scrollY > 100)
         })
     </script>
 </body>
