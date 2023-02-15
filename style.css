@@ -15,9 +15,17 @@
     background: transparent;
     width: 0px;
 }
+ul{
+    padding: 0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+}
 body{
+    width: 100%;
     min-height: 20vh;
 }
+
 header{
     position: fixed;
     width: 100%;
@@ -56,13 +64,10 @@ header ul{
    justify-content: center;
    align-items: center;
 }
-header ul li{
-    position: relative;
-}
+
 header ul li a{
     font-size: .8em;
     position: relative;
-    margin: 0 5px;
     color: #fff;
     transition: 0.6s;
 }
@@ -157,7 +162,7 @@ article{
     height: auto;
     overflow: hidden;
 }
-span{
+span.media{
   overflow: hidden;
   background-color: #000;
   padding: 15px;
@@ -170,10 +175,10 @@ span{
   align-items: center;
   gap: 40px;
 }
-span>img{
+span.media>img{
   width: 60px;
 }
-span:hover{
+span.media:hover{
 width: 400px;
 padding: 20px;
 }
@@ -196,7 +201,7 @@ padding: 20px;
   text-align: center;
   font-size: 2.5rem;
 }
-span a{
+span.media a{
   color: #fff;
   text-transform: uppercase;
   text-align: left;
@@ -230,6 +235,71 @@ span a{
 .logus{
   width: 100%;
 background-color: #0000003f;
+}
+@media (max-width:768px) {
+    header ul{
+        position: absolute;
+        top: 100%;
+        background-color: #aa801c;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: 100vh;
+        padding: 10px;
+        transform: translateX(-110%);
+        transition: 0.3s ease all;
+    }
+    .sticky .open{
+        transform:translateX(-15px) !important;
+    }
+    header ul li a{
+        text-align: center;
+        font-size: 2rem;
+    }
+    header ul li a:hover{
+        color: #c4c4c4;
+        font-size: 2.1rem;
+    }
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        transition: 0.6s;
+        padding: 20px 30px;
+    }
+    header.sticky .menuh span{
+        background-color: #000;
+    }
+    .menuh{
+        display: flex !important;
+        flex-direction: column;
+    }
+    .menuh span{
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 2px;
+        margin-bottom: 5px;
+        transform-origin:5px 0px;
+        transition: 0.4s;
+    }
+    .close span{
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+    .close span:nth-child(2){
+        display: none;
+    }
+    .close span:nth-child(3){
+        transform: rotate(-45deg) translate(-5px, 1px);
+    }
+    .open{
+        transform: translateX(-30px) !important;
+    }
+
 }
 @media (min-width:900px) {
     header .logo{
@@ -284,6 +354,9 @@ background-color: #0000003f;
     .ab{
         width: 100%;
         height: auto;
+    }
+    .menuh{
+        display: none;
     }
     .cel{
         visibility: hidden;

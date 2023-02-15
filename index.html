@@ -11,11 +11,16 @@
 <body>
         <header>
             <a href="#" class="logo" >ADITUS</a>
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Contact">Contact</a></li>
+            <ul id="_items">
+                <li><a class="_cerrado" href="#Home">Home</a></li>
+                <li><a class="_cerrado" href="#About">About</a></li>
+                <li><a class="_cerrado" href="#Contact">Contact</a></li>
             </ul>
+            <div class="menuh" id="_toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
     <section>
         <article id="banner">
@@ -80,8 +85,8 @@
                         <p>
                             CONTÁCTANOS
                         </p>
-                        <span><img src="images/gmail (1).png" alt=""><a blank_ href="mailto:aditusofficial@gmail.com">NUESTRO GMAIL</a></img></span>
-                        <span><img src="images/instagram.png" alt=""><a href="">NUESTRO instagram</a></img></span>
+                        <span class="media"><img src="images/gmail (1).png" alt=""><a blank_ href="mailto:aditusofficial@gmail.com">NUESTRO GMAIL</a></img></span>
+                        <span class="media"><img src="images/instagram.png" alt=""><a href="https://www.instagram.com/aditus_official/">NUESTRO instagram</a></img></span>
                     </div>
                     <img src="images/3-svg.svg" height="50%" width="auto" alt="">
                 </div>
@@ -93,10 +98,12 @@
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 100);
         })
-        // window.addEventListener("scroll", function(){
-        //     var span = document.querySelector("span");
-        //     span.classList.toogle("appear", window.scrollY > 100)
-        // })
+        _toggle.onclick = () =>{
+            _items.classList.toggle("open")
+            _toggle.classList.toggle("close")
+            _cerrado.classList.toggle("close")
+
+        }
     </script>
 </body>
 </html>
