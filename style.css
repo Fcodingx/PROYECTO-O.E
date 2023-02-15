@@ -137,103 +137,8 @@ article{
 }
 #Contact{
   width: 100%;
+  padding: 0px;
 }
-
-.login-box {
-    width: 100%;
-    height: auto;
-    background: rgba(0,0,0,.9);
-    box-sizing: border-box;
-    display: flex;
-    padding: 20px;
-    align-items: stretch;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
-  .login-box p:first-child {
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-  
-  .login-box .user-box {
-    position: relative;
-
-  }
-  
-  .login-box .user-box input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
-    margin-bottom: 40px;
-  }
-  
-  .login-box .user-box label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
-  }
-  
-  .login-box .user-box input:focus ~ label,
-  .login-box .user-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #fff;
-    font-size: 12px;
-  }
-  
-  .login-box form a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    font-weight: bold;
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 40px;
-    letter-spacing: 3px;
-    border: 1px solid #fff;
-  }
-  
-  .login-box a:hover {
-    background: #fff;
-    color: #272727;
-    border-radius: 5px;
-  }
-  
-  
-  .login-box p:last-child {
-    color: #aaa;
-    font-size: 14px;
-  }
-  
-  .login-box a.a2 {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .login-box a.a2:hover {
-    background: transparent;
-    color: #aaa;
-    border-radius: 5px;
-  }
   
   .info{
     display: flex;
@@ -243,12 +148,62 @@ article{
     overflow: hidden;
   }
   .tab{
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: auto;
     overflow: hidden;
 }
   .ttab{
-    width: 100%;
+    width: auto;
+    height: 100vh;
+}
+span{
+  overflow: hidden;
+  background-color: #000;
+  padding: 15px;
+  border-radius: 50px;
+  width: 90px;
+  height: 90px;
+  transition: 0.8s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+span>img{
+  width: 60px;
+}
+span:hover{
+width: 400px;
+padding: 20px;
+}
+
+.eng{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: #0000006e;
+  width: 40%;
+  height: 100vh;
+  padding: 20px;
+}
+
+.eng p{
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+}
+span a{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  font-size:2rem;
+  font-weight: bold;
+
 }
 
 @media (min-width:900px) {
@@ -327,12 +282,12 @@ article{
         font-size: 1.5rem;
     }
     .tab{
-        width: 60%;
+        width: 100%;
         height: auto;
         overflow: hidden;
     }
     .ttab{
-        width: 150%;
+        width: 100%;
     }
     .info{
         display: flex;
@@ -348,14 +303,5 @@ article{
         height: 50%;
         overflow: hidden;
       }
-      .login-box {
-        width: 40%;
-        background: rgba(0,0,0,.9);
-        box-sizing: border-box;
-        display: flex;
-        padding: 20px;
-        align-items: stretch;
-        flex-direction: column;
-        justify-content: space-around;
-      }
+
 }
