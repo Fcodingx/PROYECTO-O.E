@@ -216,25 +216,24 @@ span.media a{
 .abo{
   width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
   gap: 10px;
 }
 .abo p{
-  text-align: center;
-  font-size: 1.3rem;
+  font-size: .8rem;
 }
 .abo>div:nth-child(1){
-  width: 50%;
+  width: 100%;
 }
 .abo>div:nth-child(2){
-  width: 50%;
+  width: 100%;
 }
 
 .logus{
   width: 100%;
-background-color: #0000003f;
+  height: 30vh;
+background-color: #000000d0;
 }
 @media (max-width:768px) {
     header ul{
@@ -298,6 +297,21 @@ background-color: #0000003f;
     }
     .open{
         transform: translateX(-30px) !important;
+    }
+    .ficha{
+        width: 100%;
+        height: 20px;
+        overflow: hidden;
+    }
+    .ficha div{
+        width: 100%;
+    }
+    .ficha div img{
+        width: 70%;
+        height: auto;
+    }
+    .ficha div img p{
+        position: absolute;
     }
 
 }
@@ -401,5 +415,27 @@ background-color: #0000003f;
         height: 50%;
         overflow: hidden;
       }
-
+      .abo p{
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .abo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .abo>div:nth-child(1){
+        width: 50%;
+      }
+      .abo>div:nth-child(2){
+        width: 50%;
+      }
+      .logus{
+        width: 100%;
+        height: 70vh;
+      background-color: #000000d0;
+      }
 }
