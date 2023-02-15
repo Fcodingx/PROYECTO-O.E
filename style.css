@@ -135,12 +135,15 @@ article{
 .ab{
     height: 15em;
 }
+#Contact{
+  width: 100%;
+}
 
 .login-box {
-    width: 40%;
+    width: 100%;
+    height: auto;
     background: rgba(0,0,0,.9);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
     display: flex;
     padding: 20px;
     align-items: stretch;
@@ -205,7 +208,8 @@ article{
     overflow: hidden;
     transition: .5s;
     margin-top: 40px;
-    letter-spacing: 3px
+    letter-spacing: 3px;
+    border: 1px solid #fff;
   }
   
   .login-box a:hover {
@@ -214,89 +218,6 @@ article{
     border-radius: 5px;
   }
   
-  .login-box a span {
-    position: absolute;
-    display: block;
-  }
-  
-  .login-box a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #fff);
-    animation: btn-anim1 1.5s linear infinite;
-  }
-  
-  @keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-  
-    50%,100% {
-      left: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #fff);
-    animation: btn-anim2 1.5s linear infinite;
-    animation-delay: .375s
-  }
-  
-  @keyframes btn-anim2 {
-    0% {
-      top: -100%;
-    }
-  
-    50%,100% {
-      top: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #fff);
-    animation: btn-anim3 1.5s linear infinite;
-    animation-delay: .75s
-  }
-  
-  @keyframes btn-anim3 {
-    0% {
-      right: -100%;
-    }
-  
-    50%,100% {
-      right: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #fff);
-    animation: btn-anim4 1.5s linear infinite;
-    animation-delay: 1.125s
-  }
-  
-  @keyframes btn-anim4 {
-    0% {
-      bottom: -100%;
-    }
-  
-    50%,100% {
-      bottom: 100%;
-    }
-  }
   
   .login-box p:last-child {
     color: #aaa;
@@ -316,8 +237,19 @@ article{
   
   .info{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
   }
+  .tab{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+  .ttab{
+    width: 100%;
+}
 
 @media (min-width:900px) {
     header .logo{
@@ -401,6 +333,29 @@ article{
     }
     .ttab{
         width: 150%;
-        height: auto;
     }
+    .info{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+      }
+      #Contact{
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+      }
+      .login-box {
+        width: 40%;
+        background: rgba(0,0,0,.9);
+        box-sizing: border-box;
+        display: flex;
+        padding: 20px;
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: space-around;
+      }
 }
